@@ -56,13 +56,8 @@
                   die("Connection failed: ". $conn ->connect_error);
                 }
                 $test = mysqli_query ($conn, "SELECT * FROM account_information");
-                var_dump($test);
-                echo "HELLO FAMILY!";
-                $test2 = $test->fetch_array(MYSQLI_ASSOC);
-                var_dump($test2);
-                foreach($test2 as $row){
-                  var_dump($row);
-
+              
+                while($row = mysqli_fetch_array($test)){
                   $first = $row['first_name'];
                   $last = $row['last_name'];
                   $phone = $row['phone_number'];
