@@ -34,7 +34,7 @@
     </div>
           <h2 class="sub-header"><center>Dashboard</center></h2>
           <div class="container">
-            <?php
+            <?php/*
               $sql = 'SELECT first_name, last_name, phone_number, account_number, twitter_account, status FROM account_information';
                 mysql_select_db('Lockation');
                 $retval = mysql_query( $sql, $conn );
@@ -51,7 +51,7 @@
               }
               echo "Fetched data successfully\n";
               mysql_close($conn);
-              ?>
+              */?>
           <div class="table-responsive">
             <table class="table">
               <thead>
