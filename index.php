@@ -58,10 +58,8 @@
                 $test = mysqli_query ($conn, "SELECT * FROM account_information");
                 var_dump($test);
                 echo "HELLO FAMILY!";
-                $test2 = $test->fetch_array(MYSQLI_ASSOC);
-                var_dump($test2);
-                foreach($test2 as $row){
-                  echo "S";
+                foreach($test as $row2){
+                  $row = $row2->fetch_array(MYSQLI_ASSOC);
                   var_dump($row);
                   $first = $row['first_name'];
                   $last = $row['last_name'];
