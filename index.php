@@ -40,8 +40,6 @@
                 die("Connection failed: ". $conn ->connect_error);
               }
               $test = mysqli_query ($conn, "SELECT * FROM account_information");
-
-              var_dump($test);
               ?>
           <div class="table-responsive">
             <table class="table">
@@ -65,55 +63,16 @@
                   $acc = $row->account_number;
                   $twit = $row->twitter_account;
                   $status = $row->status;
+                  echo"<tr>";
+                  echo"<td> ".$first." </td>";
+                  echo"<td> ".$last." </td>";
+                  echo"<td> ".$phone." </td>";
+                  echo"<td> ".$acc." </td>";
+                  echo"<td> ".$twit." </td>";
+                  echo"<td> ".$status." </td>";
+                  echo"<td><button class="btn btn-xs btn-warning" type="submit">Create Transaction</button></td></tr>";
                 }
                 ?>
-                 <tr>
-                  <td><?php echo $first; ?></td>
-                  <td><?php echo $last; ?></td>
-                  <td><?php echo $phone; ?></td>
-                  <td><?php echo $acc; ?></td>
-                  <td><?php echo $twit; ?></td>
-                  <td><?php echo $status; ?></td>
-                 <td><button class="btn btn-xs btn-warning" type="submit">Create Transaction</button></td>
-               </tr>
-               <?php
-               foreach($test as $row){
-                 $first = $row->first_name;
-                 $last = $row->last_name;
-                 $phone = $row->phone_number;
-                 $acc = $row->account_number;
-                 $twit = $row->twitter_account;
-                 $status = $row->status;
-               }
-               ?>
-                  <tr>
-                    <td><?php echo $first; ?></td>
-                    <td><?php echo $last; ?></td>
-                    <td><?php echo $phone; ?></td>
-                    <td><?php echo $acc; ?></td>
-                    <td><?php echo $twit; ?></td>
-                    <td><?php echo $status; ?></td>
-                  <td><button class="btn btn-xs btn-warning" type="submit">Create Transaction</button></td>
-                </tr>
-                <?php
-                foreach($test as $row){
-                  $first = $row->first_name;
-                  $last = $row->last_name;
-                  $phone = $row->phone_number;
-                  $acc = $row->account_number;
-                  $twit = $row->twitter_account;
-                  $status = $row->status;
-                }
-                ?>
-                <tr>
-                  <td><?php echo $first; ?></td>
-                  <td><?php echo $last; ?></td>
-                  <td><?php echo $phone; ?></td>
-                  <td><?php echo $acc; ?></td>
-                  <td><?php echo $twit; ?></td>
-                  <td><?php echo $status; ?></td>
-                  <td><button class="btn btn-xs btn-warning" type="submit">Create Transaction</button></td>
-                </tr>
               </tbody>
             </table>
           </div>
