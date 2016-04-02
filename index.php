@@ -70,7 +70,7 @@
                   echo"<td> ".$acc." </td>";
                   echo"<td> ".$twit." </td>";
                   echo"<td> ".$status." </td>";
-                  echo"<td><button class="btn btn-xs btn-warning" type="submit">Create Transaction</button></td></tr>";
+                  echo"<td><button class='btn btn-xs btn-warning' type='submit'>Create Transaction</button></td></tr>";
                 }
                 ?>
               </tbody>
