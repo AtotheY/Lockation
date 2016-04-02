@@ -56,20 +56,20 @@
                   die("Connection failed: ". $conn ->connect_error);
                 }
                 $test = mysqli_query ($conn, "SELECT * FROM account_information");
-              
-                while($row = mysqli_fetch_array($test)){
+
+                  while($row = mysqli_fetch_array($test)){
                   $first = $row['first_name'];
                   $last = $row['last_name'];
                   $phone = $row['phone_number'];
-                  $acc = $row['account_number'];
                   $twit = $row['twitter_account'];
+                  $acc = $row['account_information'];
                   $status = $row['status'];
                   echo"<tr>";
                   echo"<td> ".$first." </td>";
                   echo"<td> ".$last." </td>";
                   echo"<td> ".$phone." </td>";
-                  echo"<td> ".$acc." </td>";
                   echo"<td> ".$twit." </td>";
+                  echo"<td> ".$acc." </td>";
                   echo"<td> ".$status." </td>";
                   echo"<td><button class='btn btn-xs btn-warning' type='submit'>Create Transaction</button></td></tr>";
                 }
