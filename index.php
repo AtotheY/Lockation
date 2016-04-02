@@ -74,7 +74,6 @@
                       $pull = mysqli_query( $conn, "SELECT * FROM account_information WHERE account_number = 123456789");
                       $data = $pull->fetch_assoc();
                       echo $data['first_name'];
-                      echo "DOESN't WORK";
                     ?>
                     <form action ="denied.php" method="post" >
 		                    <button type ="submit"> Make Transaction </button>
