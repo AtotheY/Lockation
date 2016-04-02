@@ -11,15 +11,17 @@
 <link rel="icon" href="../../favicon.ico">
 <title>Lockation | Transaction Approved</title>
 
-<!-- Bootstrap core CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
+<!--// Bootstrap core CSS -->
+<!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+<!-- Bootstrap Core CSS -->
+<?php echo '<link href="'. base_url('/css/bootstrap.min.css') .'" rel="stylesheet">'; ?>
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+<?php echo '<link href="'. base_url('/css/ie10-viewport-bug-workaround.css') .'" rel="stylesheet">'; ?>
 
-<!-- Custom styles for this template -->
-<link href="C:\Users\Susie\Documents\Lockation\css\bootstrap.min.css" rel="stylesheet">
-<link href="main.css" rel="stylesheet">
+<?php echo '<link href="'. base_url('/css/bootstrap.min.css') .'" rel="stylesheet">'; ?>
+<?php echo '<link href="'. base_url('/main.css') .'" rel="stylesheet">'; ?>
+
 <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 
 
