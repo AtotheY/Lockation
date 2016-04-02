@@ -74,7 +74,7 @@
                   echo"<td> ".$status." </td>";
                   echo"<td><button class='btn btn-xs btn-warning' type='submit'>Create Transaction</button></td></tr>";
                 }
-                mysqli_close($con);
+                mysqli_close($conn);
                 ?>
               </tbody>
             </table>
