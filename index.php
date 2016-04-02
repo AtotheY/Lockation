@@ -69,9 +69,12 @@
                       }
                       else
                         echo "Success!";
-
-                      $pull = mysqli_query( $conn, "SELECT * FROM account_information");
-
+                      $pull = mysqli_query( $conn, "SELECT * FROM account_information WHERE account_number = 123456789");
+                      if ($pull['first_name'] != null)
+                        echo $pull['first_name'];
+                      else {
+                          echo "DOESN't WORK";
+                      }
                     ?>
                     <form action ="denied.php" method="post" >
 		                    <button type ="submit"> Make Transaction </button>
