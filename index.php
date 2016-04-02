@@ -12,7 +12,8 @@
     <title>Lockation | Dashboard</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="C:\Users\Susie\Documents\Lockation\css\bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="C:\Users\Susie\Documents\Lockation\css\bootstrap.min.css" rel="stylesheet"> -->
+    <?php echo '<link href="'. base_url('/css/bootstrap.min.css') .'" rel="stylesheet">'; ?>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
