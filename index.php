@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <?php
   $dbhost = 'localhost';
@@ -18,7 +17,7 @@
     <title>Lockation | Dashboard</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="Lockation/css/bootstrap.min.css" rel="stylesheet">
+    <link href="\css\bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -35,12 +34,11 @@
     </div>
           <h2 class="sub-header"><center>Dashboard</center></h2>
           <div class="container">
-          <div class="table-responsive">
             <?php
               $sql = 'SELECT first_name, last_name, phone_number, account_number, twitter_account, status FROM account_information';
                 mysql_select_db('Lockation');
                 $retval = mysql_query( $sql, $conn );
-              if(! $retval ) {
+              if(! $retval ){
                 die('Could not get data: ' . mysql_error());
               }
               while($row = mysql_fetch_assoc($retval)) {
@@ -51,10 +49,10 @@
                 echo "{$row['twitter_account']} <br> ".
                 echo "{$row['status']} <br> ".
               }
-   echo "Fetched data successfully\n";
-   mysql_close($conn);
-   ?>
-
+              echo "Fetched data successfully\n";
+              mysql_close($conn);
+              ?>
+          <div class="table-responsive">
             <table class="table">
               <thead>
                 <tr>
