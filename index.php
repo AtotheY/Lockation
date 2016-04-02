@@ -54,6 +54,7 @@
                   die("Connection failed: ". $conn ->connect_error);
                 }
                 $test = mysqli_query ($conn, "SELECT * FROM account_information");
+                var_dump($test);
                 foreach($test as $row){
                   $first = $row->first_name;
                   $last = $row->last_name;
