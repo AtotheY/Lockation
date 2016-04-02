@@ -57,8 +57,12 @@
                 }
                 $test = mysqli_query ($conn, "SELECT * FROM account_information");
                 var_dump($test);
+                echo "HELLO FAMILY!";
                 $test2 = $test->fetch_array(MYSQLI_ASSOC);
+                var_dump($test2);
                 foreach($test2 as $row){
+                  echo "S";
+                  var_dump($row);
                   $first = $row['first_name'];
                   $last = $row['last_name'];
                   $phone = $row['phone_number'];
