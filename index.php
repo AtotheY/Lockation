@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -13,17 +12,13 @@
 
     <!-- Bootstrap core CSS -->
     <link href="\css\bootstrap.min.css" rel="stylesheet">
+
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="\css\ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="main.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
 
   <body>
@@ -37,7 +32,7 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th>First Name</th>
+                  <th>Fisrt Name</th>
                   <th>Last Name</th>
                   <th>Account Number</th>
                   <th>Twitter</th>
@@ -47,57 +42,39 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Test</td>
-                  <td>Test</td>
-                  <td>0001</td>
-                  <td>@anon_1</td>
-                  <td>319483001</td>
-                  <td>Ready</td>
-                  <td>
+                <?php
+                error_reporting(E_ALL);
+                ini_set('display_errors', 1);
+                define ('DB_NAME', 'Lockation');
+                define ('DB_USER', 'root');
+                define ('DB_PASSWORD', '.....1');
+                define ('DB_HOST', 'localhost');
 
-                    <?php
-                      define ('DB_NAME', 'Lockation');
-                      define ('DB_USER', 'root');
-                      define ('DB_PASSWORD', '.....1');
-                      define ('DB_HOST', 'localhost');
-                      error_reporting(E_ALL);
-                      ini_set('display_errors', 1);
-                      $conn = new mysqli(DB_HOST, DB_USER , DB_PASSWORD, DB_NAME);
-                      if ($conn -> connect_error)
-                      {
-                      	die("Connection failed: :" . $conn-> conect_error);
-                      }
-                      else
-                        echo "Success!";
+                $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+                if ($conn -> connect_error)
+                {
+                  die("Connection failed: ". $conn ->connect_error);
+                }
+                $test = mysqli_query ($conn, "SELECT * FROM account_information");
 
-                      $pull = mysqli_query( $conn, "SELECT * FROM account_information WHERE account_number = 123456789");
-                      $data = $pull->fetch_assoc();
-                      echo $data['first_name'];
-                    ?>
-                    <form action ="denied.php" method="post" >
-		                    <button type ="submit"> Make Transaction </button>
-		                </form>
-		              </td>
-                </tr>
-                <tr>
-                  <td>Test</td>
-                  <td>Test</td>
-                  <td>0002</td>
-                  <td>@anon_2</td>
-                  <td>282930493</td>
-                  <td>Locked</td>
-                  <td><button class="btn btn-xs btn-warning" type="submit">Create Transaction</button></td>
-                </tr>
-                <tr>
-                  <td>Test</td>
-                  <td>Test</td>
-                  <td>0003</td>
-                  <td>@anon_3</td>
-                  <td>392019222</td>
-                  <td>Waiting</td>
-                  <td><button class="btn btn-xs btn-warning" type="submit">Create Transaction</button></td>
-                </tr>
+                  while($row = mysqli_fetch_array($test)){
+                  $first = $row['first_name'];
+                  $last = $row['last_name'];
+                  $phone = $row['phone_number'];
+                  $twit = $row['twitter_account'];
+                  $acc = $row['account_number'];
+                  $status = $row['status'];
+                  echo"<tr>";
+                  echo"<td> ".$first." </td>";
+                  echo"<td> ".$last." </td>";
+                  echo"<td> ".$phone." </td>";
+                  echo"<td> ".$twit." </td>";
+                  echo"<td> ".$acc." </td>";
+                  echo"<td> ".$status." </td>";
+                  echo"<td><button class='btn btn-xs btn-warning' type='submit'>Create Transaction</button></td></tr>";
+                }
+                mysqli_close($conn);
+                ?>
               </tbody>
             </table>
           </div>
