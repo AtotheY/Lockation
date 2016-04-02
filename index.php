@@ -54,7 +54,11 @@
                   <td>@anon_1</td>
                   <td>319483001</td>
                   <td>Ready</td>
-                  <td><button class="btn btn-xs btn-warning" type="submit" onclick ="/denied.php/">Create Transaction</button></td>
+                  <td>
+                  <form action ="denied.php" method="post" >
+		     <button type ="submit"> Make Transaction </button>
+		  </form>
+		  </td>
                 </tr>
                 <tr>
                   <td>Test</td>
