@@ -28,19 +28,6 @@
     </div>
           <h2 class="sub-header"><center>Dashboard</center></h2>
           <div class="container">
-            <?php
-              define ('DB_NAME', 'Lockation');
-              define ('DB_USER', 'root');
-              define ('DB_PASSWORD', '.....1');
-              define ('DB_HOST', 'localhost');
-
-              $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-              if ($conn -> connect_error)
-              {
-                die("Connection failed: ". $conn ->connect_error);
-              }
-              $test = mysqli_query ($conn, "SELECT * FROM account_information");
-              ?>
           <div class="table-responsive">
             <table class="table">
               <thead>
@@ -56,6 +43,17 @@
               </thead>
               <tbody>
                 <?php
+                define ('DB_NAME', 'Lockation');
+                define ('DB_USER', 'root');
+                define ('DB_PASSWORD', '.....1');
+                define ('DB_HOST', 'localhost');
+
+                $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+                if ($conn -> connect_error)
+                {
+                  die("Connection failed: ". $conn ->connect_error);
+                }
+                $test = mysqli_query ($conn, "SELECT * FROM account_information");
                 foreach($test as $row){
                   $first = $row->first_name;
                   $last = $row->last_name;
