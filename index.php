@@ -56,7 +56,7 @@
                 $test = mysqli_query ($conn, "SELECT * FROM account_information");
                 var_dump($test);
                 foreach($test as $row){
-                  var_dump($row)
+                  var_dump($row);
                   $first = $row['first_name'];
                   $last = $row['last_name'];
                   $phone = $row['phone_number'];
