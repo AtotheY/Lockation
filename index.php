@@ -59,7 +59,7 @@
                 var_dump($test);
                 echo "HELLO FAMILY!";
                 foreach($test as $row2){
-                  $row = $row2->fetch_array(MYSQLI_ASSOC);
+                  $row = $row2->fetch_assoc();
                   var_dump($row);
                   $first = $row['first_name'];
                   $last = $row['last_name'];
