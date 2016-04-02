@@ -57,7 +57,7 @@
                 }
                 $test = mysqli_query ($conn, "SELECT * FROM account_information");
                 var_dump($test);
-                $test2 = $test->fetch_assoc();
+                $test2 = $test->fetch_array(MYSQLI_ASSOC);
                 foreach($test2 as $row){
                   $first = $row['first_name'];
                   $last = $row['last_name'];
