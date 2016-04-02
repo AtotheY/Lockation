@@ -72,11 +72,12 @@
                   $twit = $row['twitter_account'];
                   $acc = $row['account_number'];
                   $msg = $row['status'];
-                  if ($msg = 0)
+	          echo $msg;
+                  if ($msg == 0)
                   {
                     $status = "Create Transaction";
                   }
-                  else if ($msg = 1)
+                  else if ($msg == 1)
                   {
                     $status = "Awaiting Verification";
                   }
