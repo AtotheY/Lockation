@@ -61,7 +61,8 @@
                       define ('DB_USER', 'root');
                       define ('DB_PASSWORD', '.....1');
                       define ('DB_HOST', 'localhost');
-
+                      error_reporting(E_ALL);
+                      ini_set('display_errors', 1);
                       $conn = new mysqli(DB_HOST, DB_USER , DB_PASSWORD, DB_NAME);
                       if ($conn -> connect_error)
                       {
