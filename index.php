@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+  $dbhost = 'localhost';
+  $dbuser = 'root';
+  $dbpass = '.....1';
+  $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+?>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +18,7 @@
     <title>Lockation | Dashboard</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="C:\Users\Susie\Documents\Lockation\css\bootstrap.min.css" rel="stylesheet">
+    <link href="Lockation/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -35,10 +41,29 @@
           <h2 class="sub-header"><center>Dashboard</center></h2>
           <div class="container">
           <div class="table-responsive">
+            <?php
+              $sql = 'SELECT first_name, last_name, phone_number, account_number, twitter_account, status FROM account_information';
+                mysql_select_db('Lockation');
+                $retval = mysql_query( $sql, $conn );
+              if(! $retval ) {
+                die('Could not get data: ' . mysql_error());
+              }
+              while($row = mysql_fetch_assoc($retval)) {
+                echo "{$row['first_name']}  <br>".
+                echo "{$row['last_name']} <br>".
+                echo "{$row['phone_number']} <br> ".
+                echo "{$row['account_number']} <br> ".
+                echo "{$row['twitter_account']} <br> ".
+                echo "{$row['status']} <br> ".
+              }
+   echo "Fetched data successfully\n";
+   mysql_close($conn);
+   ?>
+
             <table class="table">
               <thead>
                 <tr>
-                  <th>First Name</th>
+                  <th>Fisrt Name</th>
                   <th>Last Name</th>
                   <th>Account Number</th>
                   <th>Twitter</th>
@@ -48,16 +73,18 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Test</td>
-                  <td>Test</td>
-                  <td>0001</td>
-                  <td>@anon_1</td>
-                  <td>319483001</td>
-                  <td>Ready</td>
+
+                  <tr>
+                  <td><?php echo $first; ?></td>
+                  <td><?php echo $last; ?></td>
+                  <td><?php echo $phone; ?></td>
+                  <td><?php echo $acc; ?></td>
+                  <td><?php echo $twit; ?></td>
+                  <td><?php echo $status; ?></td>
                   <td><button class="btn btn-xs btn-warning" type="submit">Create Transaction</button></td>
-                </tr>
-                <tr>
+                  </tr>
+
+                  <tr>
                   <td>Test</td>
                   <td>Test</td>
                   <td>0002</td>
