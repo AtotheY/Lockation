@@ -42,24 +42,7 @@
               $test = mysqli_query ($conn, "SELECT * FROM account_information");
 
               var_dump($test);
-            /*
-              $sql = 'SELECT first_name, last_name, phone_number, account_number, twitter_account, status FROM account_information';
-                mysql_select_db('Lockation');
-                $retval = mysql_query( $sql, $conn );
-              if(! $retval ){
-                die('Could not get data: ' . mysql_error());
-              }
-              while($row = mysql_fetch_assoc($retval)) {
-                echo "{$row['first_name']}  <br>".
-                echo "{$row['last_name']} <br>".
-                echo "{$row['phone_number']} <br> ".
-                echo "{$row['account_number']} <br> ".
-                echo "{$row['twitter_account']} <br> ".
-                echo "{$row['status']} <br> ".
-              }
-              echo "Fetched data successfully\n";
-              mysql_close($conn);
-              */?>
+              ?>
           <div class="table-responsive">
             <table class="table">
               <thead>
@@ -74,33 +57,61 @@
                 </tr>
               </thead>
               <tbody>
-
-                 <!--<tr>
-                  <td><?php //echo $first; ?></td>
-                  <td><?php //echo $last; ?></td>
-                  <td><?php //echo $phone; ?></td>
-                  <td><?php //echo $acc; ?></td>
-                  <td><?php //echo $twit; ?></td>
-                  <td><?php //echo $status; ?></td>
+                <?php
+                foreach($test as $row){
+                  $first = $row->first_name;
+                  $last = $row->last_name;
+                  $phone = $row->phone_number;
+                  $acc = $row->account_number;
+                  $twit = $row->twitter_account;
+                  $status = $row->status;
+                }
+                ?>
+                 <tr>
+                  <td><?php echo $first; ?></td>
+                  <td><?php echo $last; ?></td>
+                  <td><?php echo $phone; ?></td>
+                  <td><?php echo $acc; ?></td>
+                  <td><?php echo $twit; ?></td>
+                  <td><?php echo $status; ?></td>
                  <td><button class="btn btn-xs btn-warning" type="submit">Create Transaction</button></td>
-               </tr> -->
-
+               </tr>
+               <?php
+               foreach($test as $row){
+                 $first = $row->first_name;
+                 $last = $row->last_name;
+                 $phone = $row->phone_number;
+                 $acc = $row->account_number;
+                 $twit = $row->twitter_account;
+                 $status = $row->status;
+               }
+               ?>
                   <tr>
-                  <td>Test</td>
-                  <td>Test</td>
-                  <td>0002</td>
-                  <td>@anon_2</td>
-                  <td>282930493</td>
-                  <td>Locked</td>
+                    <td><?php echo $first; ?></td>
+                    <td><?php echo $last; ?></td>
+                    <td><?php echo $phone; ?></td>
+                    <td><?php echo $acc; ?></td>
+                    <td><?php echo $twit; ?></td>
+                    <td><?php echo $status; ?></td>
                   <td><button class="btn btn-xs btn-warning" type="submit">Create Transaction</button></td>
                 </tr>
+                <?php
+                foreach($test as $row){
+                  $first = $row->first_name;
+                  $last = $row->last_name;
+                  $phone = $row->phone_number;
+                  $acc = $row->account_number;
+                  $twit = $row->twitter_account;
+                  $status = $row->status;
+                }
+                ?>
                 <tr>
-                  <td>Test</td>
-                  <td>Test</td>
-                  <td>0003</td>
-                  <td>@anon_3</td>
-                  <td>392019222</td>
-                  <td>Waiting</td>
+                  <td><?php echo $first; ?></td>
+                  <td><?php echo $last; ?></td>
+                  <td><?php echo $phone; ?></td>
+                  <td><?php echo $acc; ?></td>
+                  <td><?php echo $twit; ?></td>
+                  <td><?php echo $status; ?></td>
                   <td><button class="btn btn-xs btn-warning" type="submit">Create Transaction</button></td>
                 </tr>
               </tbody>
