@@ -46,7 +46,7 @@
                 define ('DB_NAME', 'Lockation');
                 define ('DB_USER', 'root');
                 define ('DB_PASSWORD', '.....1');
-                define ('DB_HOST', '45.79.168.186');
+                define ('DB_HOST', 'localhost');
 
                 $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
                 if ($conn -> connect_error)
@@ -56,12 +56,12 @@
                 $test = mysqli_query ($conn, "SELECT * FROM account_information");
                 var_dump($test);
                 foreach($test as $row){
-                  $first = $row->first_name;
-                  $last = $row->last_name;
-                  $phone = $row->phone_number;
-                  $acc = $row->account_number;
-                  $twit = $row->twitter_account;
-                  $status = $row->status;
+                  $first = $row['first_name'];
+                  $last = $row['last_name'];
+                  $phone = $row['phone_number'];
+                  $acc = $row['account_number'];
+                  $twit = $row['twitter_account'];
+                  $status = $row['status'];
                   echo"<tr>";
                   echo"<td> ".$first." </td>";
                   echo"<td> ".$last." </td>";
