@@ -12,9 +12,9 @@
     <title>Lockation | Dashboard</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="\var\www\html\Location.org\public_html\Lockation\css\bootstrap.min.css" rel="stylesheet">
+    <link href="\css\bootstrap.min.css" rel="stylesheet">
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="\css\ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="main.css" rel="stylesheet">
@@ -54,7 +54,7 @@
                   <td>@anon_1</td>
                   <td>319483001</td>
                   <td>Ready</td>
-                  <td><button class="btn btn-xs btn-warning" type="submit" onclick ="denied.php">Create Transaction</button></td>
+                  <td><button class="btn btn-xs btn-warning" type="submit" onclick ="/denied.php/">Create Transaction</button></td>
                 </tr>
                 <tr>
                   <td>Test</td>
