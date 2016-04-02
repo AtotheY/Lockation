@@ -42,6 +42,14 @@
                 </tr>
               </thead>
               <tbody>
+
+
+
+
+                $pull = mysqli_query( $conn, "SELECT * FROM account_information WHERE account_number = 123456789");
+                $data = $pull->fetch_assoc();
+                echo $data['first_name'];
+
                 <?php
                 error_reporting(E_ALL);
                 ini_set('display_errors', 1);
@@ -63,7 +71,18 @@
                   $phone = $row['phone_number'];
                   $twit = $row['twitter_account'];
                   $acc = $row['account_number'];
-                  $status = $row['status'];
+                  $msg = $row['status'];
+                  if ($msg = 0)
+                  {
+                    $status = "Create Transaction";
+                  }
+                  else if ($msg = 1)
+                  {
+                    $status = "Awaiting Verification";
+                  }
+                  else
+                    $status = "Account Locked";
+
                   echo"<tr>";
                   echo"<td> ".$first." </td>";
                   echo"<td> ".$last." </td>";
@@ -71,7 +90,15 @@
                   echo"<td> ".$twit." </td>";
                   echo"<td> ".$acc." </td>";
                   echo"<td> ".$status." </td>";
-                  echo"<td><button class='btn btn-xs btn-warning' type='submit'>Create Transaction</button></td></tr>";
+                  if ($msg = 0)
+                    echo"<td><button class='btn btn-xs btn-warning' type='submit'>Create Transaction</button></td></tr>";
+                  else if ($msg = 1)
+                    echo"<td><button class='btn btn-xs btn-warning' type='submit'>Clear Waiting</button></td></tr>";
+                  else {
+                    echo"<td><button class='btn btn-xs btn-warning' type='submit'>Unlock Account</button></td></tr>";
+
+                  }
+
                 }
                 mysqli_close($conn);
                 ?>
