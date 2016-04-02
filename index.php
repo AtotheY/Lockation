@@ -43,6 +43,8 @@
               </thead>
               <tbody>
                 <?php
+                error_reporting(E_ALL);
+                ini_set('display_errors', 1);
                 define ('DB_NAME', 'Lockation');
                 define ('DB_USER', 'root');
                 define ('DB_PASSWORD', '.....1');
@@ -55,8 +57,8 @@
                 }
                 $test = mysqli_query ($conn, "SELECT * FROM account_information");
                 var_dump($test);
-                foreach($test as $row2){
-                  $row = $row2->fetch_assoc();
+                $test2 = $test->fetch_assoc();
+                foreach($test2 as $row){
                   $first = $row['first_name'];
                   $last = $row['last_name'];
                   $phone = $row['phone_number'];
