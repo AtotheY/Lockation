@@ -62,7 +62,7 @@
                   $last = $row['last_name'];
                   $phone = $row['phone_number'];
                   $twit = $row['twitter_account'];
-                  $acc = $row['account_information'];
+                  $acc = $row['account_number'];
                   $status = $row['status'];
                   echo"<tr>";
                   echo"<td> ".$first." </td>";
