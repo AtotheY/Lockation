@@ -1,10 +1,4 @@
 <html lang="en">
-<?php
-  $dbhost = 'localhost';
-  $dbuser = 'root';
-  $dbpass = '.....1';
-  $conn = mysql_connect($dbhost, $dbuser, $dbpass);
-?>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,7 +28,21 @@
     </div>
           <h2 class="sub-header"><center>Dashboard</center></h2>
           <div class="container">
-            <?php/*
+            <?php
+              define ('DB_NAME', 'Lockation');
+              define ('DB_USER', 'root');
+              define ('DB_PASSWORD', '.....1');
+              define ('DB_HOST', 'localhost');
+
+              $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+              if ($conn -> connect_error)
+              {
+                die("Connection failed: ". $conn ->connect_error);
+              }
+              $test = mysqli_query ($conn, "SELECT * FROM account_information");
+
+              var_dump($test);
+            /*
               $sql = 'SELECT first_name, last_name, phone_number, account_number, twitter_account, status FROM account_information';
                 mysql_select_db('Lockation');
                 $retval = mysql_query( $sql, $conn );
