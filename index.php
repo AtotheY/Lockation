@@ -83,7 +83,7 @@
                   echo"<td align = 'center' valign = 'middle'> ".$status." </td>";
                   if ($msg == 0)
                   {
-                    echo"<td><form action ='transaction.php' method='post'/><button type = 'button' value = '".$acc." data-toggle='modal' data-target='#transactionForm'class='btn btn-xs btn-warning' name ='acc'>Create Transaction</button>
+                    echo"<td><form action ='transaction.php' method='post'/><button type = 'button' value = '".$acc."' data-toggle='modal' data-target='#transactionForm' class='btn btn-xs btn-warning' name ='acc'>Create Transaction</button>
                     </form></td></tr>";
                   }
                   else if ($msg == 1)
