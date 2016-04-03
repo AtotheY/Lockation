@@ -65,8 +65,10 @@ if ($conn -> connect_error)
     if ($userLoc != $newPlace)
     {
       include 'twilio.php';
+      header("Location: http://45.79.168.186/denied.php"); /* Redirect browser */
+      exit();
     }
     else {
-
+        echo "approved";
     }
 	?>
