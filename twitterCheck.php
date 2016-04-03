@@ -39,6 +39,6 @@ if ($conn -> connect_error)
       ->buildOauth($url, $requestMethod)
       ->performRequest();
 
-
-      var_dump($result);
+    $store1 = json_decode($result, true);
+    var_dump($store1);
 	?>
