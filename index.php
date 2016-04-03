@@ -77,7 +77,7 @@
                     $status = "Account Locked";
 
                   echo"<tr>";
-                  echo"<td> ".$first." </td>";
+                  echo"<td allign = 'center'> ".$first." </td>";
                   echo"<td> ".$last." </td>";
                   echo"<td> ".$phone." </td>";
                   echo"<td> ".$twit." </td>";
