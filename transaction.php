@@ -86,50 +86,43 @@
 	<div class="col-sm-12">
 	<div class="form-group">
 		<label for="clientname" class="sr-only">Name</label>
-		<input type="text" id="clientname" class="form-control" placeholder="Full Name" required="">
+		<input type="text" id="clientname" class="form-control" placeholder="Full Name" required="true">
 	</div>
 </div>
 
   <div class="col-sm-4">
 	<div class="form-group">
 		<label for="transactamt" class="sr-only">Transaction Value</label>
-		<input type="number" id="transactamt" class="form-control" placeholder="Transaction Value" required="">
+		<input type="number" id="transactamt" class="form-control" placeholder="Transaction Value" required="true">
 	</div>
   </div>
 
   <div class ="col-sm-8">
 	<div class="form-group">
 		<label for="transactloc" class="sr-only">Transaction Location</label>
-		<input type="text" id="transactloc" class="form-control" placeholder="Location" required="">
+		<input type="text" id="transactloc" class="form-control" placeholder="Location" required="true">
 	</div>
 </div>
 
 <div class="col-sm-4">
 <div class="form-group">
   <label for="transactdate" class="sr-only">Transaction Date</label>
-  <input type="date" id="transactdate" class="form-control" placeholder="Date" required="">
+  <input type="date" id="transactdate" class="form-control" placeholder="Date" required="true">
 </div>
 </div>
 
 <div class ="col-sm-8">
 <div class="form-group">
   <label for="transacttime" class="sr-only">Transaction Time</label>
-  <input type="time" id="transacttime" class="form-control" placeholder="Time" required="">
+  <input type="time" id="transacttime" class="form-control" placeholder="Time" required="true">
 </div>
 </div>
-
+<?php
+$accnum = $_POST['acc'];
+echo "<form action ='twitterCheck.php' method='post'/><button type = 'submit' value = '".$accnum."' class='btn btn-xs btn-warning btn-block' name ='acc'>Submit Transaction</button>
+</form>";
+ ?>
 </form>
-<div class ="col-sm-12">
-  <?php
-  $accnum = $_POST['acc'];
-
-
-
-  echo "<form action ='twitterCheck.php' method='post'/><button type = 'submit' value = '".$accnum."' class='btn btn-xs btn-warning' name ='acc'>Submit Transaction</button>
-  </form>";
-   ?>
-  <button class="btn btn-lg btn-warning btn-block" type="submit">Create Transaction</button>
-</div>
  <!-- /container -->
 
 
