@@ -43,10 +43,10 @@ if ($conn -> connect_error)
     foreach ($store1 as $row)
     {
       //$coord = $row['coordinates'];
-      //$geo = $row['geo'];
+      $geo = $row['geo'];
       $date = $row['created_at'];
       //echo "coord: " . $coord;
-      //echo "geo: " . $geo;
+      echo "geo: " . $geo;
       echo "date: " . $date;
 
     }
