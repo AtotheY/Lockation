@@ -43,13 +43,6 @@
               </thead>
               <tbody>
 
-
-
-
-                $pull = mysqli_query( $conn, "SELECT * FROM account_information WHERE account_number = 123456789");
-                $data = $pull->fetch_assoc();
-                echo $data['first_name'];
-
                 <?php
                 error_reporting(E_ALL);
                 ini_set('display_errors', 1);
@@ -92,7 +85,7 @@
                   echo"<td> ".$status." </td>";
                   if ($msg == 0)
                   {
-                    echo"<td><form action ='transaction.php' method='post'/><button type = 'submit' value = '".$phone."class='btn btn-xs btn-warning' name ='phonenum'>Create Transaction</button>
+                    echo"<td><form action ='transaction.php' method='post'/><button type = 'submit' value = '".$acc."class='btn btn-xs btn-warning' name ='acc'>Create Transaction</button>
                     </form></td></tr>";
                   }
                   else if ($msg == 1)

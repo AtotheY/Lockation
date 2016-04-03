@@ -59,7 +59,26 @@
 
 <div class="container">
 <h2><center>New Transaction</center></h2>
-<h4><center>Create a transaction for Account #, Phone #: <?php echo $_POST['phonenum']; ?>, Bank Account ###.</center></h4>
+
+<?php
+  echo $_POST['acc'];
+  error_reporting(E_ALL);
+  ini_set('display_errors', 1);
+  define ('DB_NAME', 'Lockation');
+  define ('DB_USER', 'root');
+  define ('DB_PASSWORD', '.....1');
+  define ('DB_HOST', 'localhost');
+
+  $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+  if ($conn -> connect_error)
+  {
+    die("Connection failed: ". $conn ->connect_error);
+  }
+  $test = mysqli_query ($conn, "SELECT * FROM account_information WHERE account_number = ".$_POST['acc']);
+  var_dump($temp);
+?>
+
+<h4><center>Create a transaction for Account #, Phone #: , Bank Account ###.</center></h4>
 
 <!--Form><![endif]-->
 <form role="form">
