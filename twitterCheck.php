@@ -17,10 +17,11 @@ $settings = array(
 "
 );
 
-
+  echo "TEST";
 		//setting up OAUTH info
 		// getting user Id's from previous page
 		$handle = '&screen_name=' . $_POST['acc'];
+    echo "TEST2: handle : ". $handle;
   	$url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
 		$getfield = '?screen_name='.$handle;
 		$requestMethod = 'GET';
