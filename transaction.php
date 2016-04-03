@@ -58,7 +58,25 @@
 
 <div class="container">
 <h2><center>New Transaction</center></h2>
-<h4><center>Create a transaction for Account #, @anon_1, Bank Account ###.</center></h4>
+
+<?php
+  $accnum = $_POST['acc'];
+  error_reporting(E_ALL);
+  ini_set('display_errors', 1);
+  define ('DB_NAME', 'Lockation');
+  define ('DB_USER', 'root');
+  define ('DB_PASSWORD', '.....1');
+  define ('DB_HOST', 'localhost');
+
+  $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+  if ($conn -> connect_error)
+  {
+    die("Connection failed: ". $conn ->connect_error);
+  }
+  $test = mysqli_query ($conn, "SELECT * FROM account_information WHERE account_number = '".$accnum."'");
+  echo "<h4><center>Create a transaction for Account # ".$row['account_number'].", Phone #: ".$row['phone_number'].", Twitter ID ".$row['twitter_account'].".</center></h4>";
+?>
+
 
 <!--Form><![endif]-->
 <form role="form">
@@ -66,35 +84,35 @@
 	<div class="col-sm-12">
 	<div class="form-group">
 		<label for="clientname" class="sr-only">Name</label>
-		<input type="text" id="clientname" class="form-control" placeholder="Full Name">
+		<input type="text" id="clientname" class="form-control" placeholder="Full Name" required="">
 	</div>
 </div>
 
   <div class="col-sm-4">
 	<div class="form-group">
 		<label for="transactamt" class="sr-only">Transaction Value</label>
-		<input type="number" id="transactamt" class="form-control" placeholder="Transaction Value">
+		<input type="number" id="transactamt" class="form-control" placeholder="Transaction Value" required="">
 	</div>
   </div>
 
   <div class ="col-sm-8">
 	<div class="form-group">
 		<label for="transactloc" class="sr-only">Transaction Location</label>
-		<input type="text" id="transactloc" class="form-control" placeholder="Location">
+		<input type="text" id="transactloc" class="form-control" placeholder="Location" required="">
 	</div>
 </div>
 
 <div class="col-sm-4">
 <div class="form-group">
   <label for="transactdate" class="sr-only">Transaction Date</label>
-  <input type="date" id="transactdate" class="form-control" placeholder="Date">
+  <input type="date" id="transactdate" class="form-control" placeholder="Date" required="">
 </div>
 </div>
 
 <div class ="col-sm-8">
 <div class="form-group">
   <label for="transacttime" class="sr-only">Transaction Time</label>
-  <input type="time" id="transacttime" class="form-control" placeholder="Time">
+  <input type="time" id="transacttime" class="form-control" placeholder="Time" required="">
 </div>
 </div>
 
