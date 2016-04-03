@@ -45,6 +45,7 @@ if ($conn -> connect_error)
     $store1 = json_decode($result, true);
     //var_dump($store1);
     $done = false;
+    $newPlace = "";
     foreach ($store1 as $row)
     {
       $geo = $row['geo'];
@@ -53,11 +54,19 @@ if ($conn -> connect_error)
       if ($place != null)
       {
         echo "ANTHONY". " ". $place['name'];
+        $newPlace = $place['name'];
         $done = true;
       }
       if ($done)
         break;
     }
-    echo "LOCATION: ";
-    echo $_POST['transactloc'];
+    $userLoc =  $_POST['transactloc'];
+
+    if ($userLoc != $newPlace)
+    {
+      include 'twilio.php';
+    }
+    else {
+
+    }
 	?>

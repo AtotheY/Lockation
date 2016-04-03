@@ -89,14 +89,14 @@ session_start();
 	<div class="col-sm-12">
 	<div class="form-group">
 		<label for="clientname" class="sr-only">Name</label>
-		<input type="text" id="clientname" class="form-control" placeholder="Full Name" required="true">
+		<input type="text" id="clientname" name = "clientname" class="form-control" placeholder="Full Name" required="true">
 	</div>
 </div>
 
   <div class="col-sm-4">
 	<div class="form-group">
 		<label for="transactamt" class="sr-only">Transaction Value</label>
-		<input type="number" id="transactamt" class="form-control" placeholder="Transaction Value" required="true">
+		<input type="number" id="transactamt" class="form-control" name = "transactamt" placeholder="Transaction Value" required="true">
 	</div>
   </div>
 
@@ -110,14 +110,14 @@ session_start();
 <div class="col-sm-4">
 <div class="form-group">
   <label for="transactdate" class="sr-only">Transaction Date</label>
-  <input type="date" id="transactdate" class="form-control" placeholder="Date" required="true">
+  <input type="date" id="transactdate" name = "transactdate" class="form-control" placeholder="Date" required="true">
 </div>
 </div>
 
 <div class ="col-sm-8">
 <div class="form-group">
   <label for="transacttime" class="sr-only">Transaction Time</label>
-  <input type="time" id="transacttime" class="form-control" placeholder="Time" required="true">
+  <input type="time" id="transacttime" name = "transacttime" class="form-control" placeholder="Time" required="true">
 </div>
 </div>
 <input type="submit" value="Submit">
