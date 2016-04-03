@@ -29,7 +29,7 @@ session_start();
     <h2 class="sub-header"><center>Dashboard</center></h2>
     <div class="container">
       <!--<iframe src="dashboard.html" width="100%" height="300" style="border:0" id="index"></iframe>-->
-      <p>Protect yourself from credit card fraud easily and on the go with the help of Twitter and Capital One.</p>
+      <p><center>Protect yourself from credit card fraud easily and on the go with the help of Twitter and Capital One.</center></p> <p></p>
        <div class="table-responsive">
             <table class="table">
               <thead>
