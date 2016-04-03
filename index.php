@@ -32,13 +32,13 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th>Fisrt Name</th>
-                  <th>Last Name</th>
-                  <th>Account Number</th>
-                  <th>Twitter</th>
-                  <th>Bank Account Number</th>
-                  <th>Status</th>
-                  <th>Action</th>
+                  <th align = 'center' valign = 'center'>Fisrt Name</th>
+                  <th align = 'center' valign = 'center'>Last Name</th>
+                  <th align = 'center' valign = 'center'>Account Number</th>
+                  <th align = 'center' valign = 'center'>Twitter</th>
+                  <th align = 'center' valign = 'center'>Bank Account Number</th>
+                  <th align = 'center' valign = 'center'>Status</th>
+                  <th align = 'center' valign = 'center'>Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -77,12 +77,12 @@
                     $status = "Account Locked";
 
                   echo"<tr>";
-                  echo"<td align = 'center'> ".$first." </td>";
-                  echo"<td align = 'center'> ".$last." </td>";
-                  echo"<td align = 'center'> ".$phone." </td>";
-                  echo"<td align = 'center'> ".$twit." </td>";
-                  echo"<td align = 'center'> ".$acc." </td>";
-                  echo"<td align = 'center'> ".$status." </td>";
+                  echo"<td align = 'center' valign = 'center'> ".$first." </td>";
+                  echo"<td align = 'center' valign = 'center'> ".$last." </td>";
+                  echo"<td align = 'center' valign = 'center'> ".$phone." </td>";
+                  echo"<td align = 'center' valign = 'center'> ".$twit." </td>";
+                  echo"<td align = 'center' valign = 'center'> ".$acc." </td>";
+                  echo"<td align = 'center' valign = 'center'> ".$status." </td>";
                   if ($msg == 0)
                   {
                     echo"<td><form action ='transaction.php' method='post'/><button type = 'submit' value = '".$acc."class='btn btn-xs btn-warning' name ='acc'>Create Transaction</button>
