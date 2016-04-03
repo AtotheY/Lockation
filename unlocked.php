@@ -84,7 +84,7 @@ $test = mysqli_query ($conn, "UPDATE account_information SET status = '0' WHERE 
 <!--Form><![endif]-->
 
 <div class ="col-sm-12">
-  <form action = "dashboard.php">
+  <form action = "index.php">
     <button class="btn btn-lg btn-warning btn-block" type="submit">Back to Dashboard</button>
   </form>
 </div>
