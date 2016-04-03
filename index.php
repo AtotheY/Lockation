@@ -30,7 +30,7 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th align = 'center' valign = 'middle'>Fisrt Name</th>
+                  <th align = 'center' valign = 'middle'>First Name</th>
                   <th align = 'center' valign = 'middle'>Last Name</th>
                   <th align = 'center' valign = 'middle'>Account Number</th>
                   <th align = 'center' valign = 'middle'>Twitter</th>
