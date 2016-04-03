@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 require_once('TwitterAPIExchange.php');
 ini_set('display_errors', 1);
 ini_set('display_start;

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -100,7 +103,7 @@
   <div class ="col-sm-8">
 	<div class="form-group">
 		<label for="transactloc" class="sr-only">Transaction Location</label>
-		<input type="text" id="transactloc" class="form-control" placeholder="Location" required="true">
+		<input type="text" id="transactloc" name="transactloc" class="form-control" placeholder="Location" required="true">
 	</div>
 </div>
 
