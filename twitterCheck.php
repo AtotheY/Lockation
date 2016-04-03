@@ -40,18 +40,11 @@ if ($conn -> connect_error)
       ->performRequest();
 
     $store1 = json_decode($result, true);
+    var_dump($store1);
     foreach ($store1 as $row)
     {
       //$coord = $row['coordinates'];
       $geo = $row['geo'];
       $date = $row['created_at'];
-      var_dump($row['coordinates']);
-
-      //var_dump($cords);
-      //echo "coord: " . $coord;
-      echo "geo: " . $geo;
-      var_dump($geo);
-      echo "date: " . $date;
-
     }
 	?>
