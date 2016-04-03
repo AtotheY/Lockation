@@ -48,5 +48,4 @@ if ($conn -> connect_error)
       echo $date;
 
     }
-    var_dump($store1);
 	?>
