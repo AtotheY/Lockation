@@ -76,6 +76,8 @@
   }
   $test = mysqli_query ($conn, "SELECT * FROM account_information WHERE account_number = '$accnum'");
   var_dump($test);
+  echo "***************";
+  echo $test['first_name'];
   foreach ($test as $row3)
   {
     echo $row3;
