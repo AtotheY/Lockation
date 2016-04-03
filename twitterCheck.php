@@ -55,4 +55,6 @@ if ($conn -> connect_error)
       if ($done)
         break;
     }
+    echo "LOCATION: ";
+    echo $_POST['transactloc'];
 	?>
