@@ -67,7 +67,7 @@
                   $msg = $row['status'];
                   if ($msg == 0)
                   {
-                    $status = "Create Transaction";
+                    $status = "Available";
                   }
                   else if ($msg == 1)
                   {

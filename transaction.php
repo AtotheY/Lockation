@@ -75,7 +75,7 @@
     die("Connection failed: ". $conn ->connect_error);
   }
   $test = mysqli_query ($conn, "SELECT * FROM account_information WHERE account_number = '$accnum'");
-  $row = mysql_fetch_array($test);
+  $row = mysqli_fetch_array($test);
   echo "<h4><center>Create a transaction for Account # ".$row['account_number'].", Phone #: ".$row['phone_number'].", Twitter ID ".$row['twitter_account'].".</center></h4>";
 ?>
 
