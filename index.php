@@ -83,7 +83,12 @@
                   echo"<td align = 'center' valign = 'middle'> ".$status." </td>";
                   if ($msg == 0)
                   {
+<<<<<<< HEAD
                     echo"<td><form action ='transaction.php' method='post'/><button type = 'submit' value = '".$acc."' class='btn btn-xs btn-warning' name ='acc'>Create Transaction</button></form></td></tr>";
+=======
+                    echo"<td><form action ='transaction.php' method='post'/><button type = 'button' value = '".$acc."' data-toggle='modal' data-target= '#transactionForm' class='btn btn-xs btn-warning' name ='acc'>Create Transaction</button>
+                    </form></td></tr>";
+>>>>>>> 8b2112267d531bc4a3f43c154d9509a28c88f013
                   }
                   else if ($msg == 1)
                     echo"<td><button class='btn btn-xs btn-warning' type='submit'>Clear Waiting</button></td></tr>";
