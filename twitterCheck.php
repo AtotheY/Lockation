@@ -45,12 +45,11 @@ if ($conn -> connect_error)
       //$coord = $row['coordinates'];
       $geo = $row['geo'];
       $date = $row['created_at'];
-      $cords = $row['coordinates']
+      $cords = $row['users']
       var_dump($cords);
       //echo "coord: " . $coord;
       echo "geo: " . $geo;
       var_dump($geo);
-      echo "** " .$cords ." **";
       echo "date: " . $date;
 
     }
