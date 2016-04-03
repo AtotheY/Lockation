@@ -1,9 +1,4 @@
 <?php
-
-function checkTweet()
-{
-
-
 require_once('TwitterAPIExchange.php');
 ini_set('display_errors', 1);
 ini_set('display_start;
@@ -31,5 +26,4 @@ $settings = array(
       ->buildOauth($url, $requestMethod)
       ->performRequest();
       var_dump($result);
-}
 	?>
