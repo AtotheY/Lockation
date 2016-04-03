@@ -18,7 +18,7 @@
 <link rel="icon" href="../../favicon.ico">
 
 
-<title>Lockation | Account Unlocked</title>
+<title>GetFlocked | Clear any Response Waiting</title>
 
 
 <?php
@@ -78,8 +78,8 @@ $test = mysqli_query ($conn, "UPDATE account_information SET status = '0' WHERE 
 <!--Title><![endif]-->
 
 <div class="container">
-<h1><center>Account Unlocked</center></h1>
-<h4><center>Your account has been unlocked. Hurray!</center></h4>
+<h1><center>Account Un-Waited</center></h1>
+<h4><center>Your account is no longer waiting on a response. Yay!</center></h4>
 
 <!--Form><![endif]-->
 

@@ -91,10 +91,10 @@ session_start();
 
                   }
                   else if ($msg == 1)
-                    echo"<td><button class='btn btn-xs btn-warning' type='submit'>Clear Waiting</button></td></tr>";
+                    echo"<td><button class='btn btn-xs btn-warning' value = '".$acc."' type='submit'>Clear Waiting</button></td></tr>";
                   else
                   {
-                        echo"<td><form action ='unlocked.php' method='post'/><button class='btn btn-xs btn-warning' type='submit'>Unlock Account</button></form></td></tr>";
+                        echo"<td><form action ='unlocked.php' method='post'/><button class='btn btn-xs btn-warning' value = '".$acc."'type='submit'>Unlock Account</button></form></td></tr>";
                   }
                 }
                 mysqli_close($conn);
@@ -132,67 +132,5 @@ session_start();
 
                     $test = mysqli_query ($conn, "SELECT * FROM account_information WHERE account_number = '".$accnum."'");
                     $row = $test->fetch_assoc();
-                    echo "<h4><center>Create a transaction for Account # ".$row['account_number'].", Phone #: ".$row['phone_number'].", Twitter ID ".$row['twitter_account'].".</center></h4>";
-                  ?>
-                  <div class="col-sm-12">
-                	   <div class="form-group">
-                  		  <label for="clientname" class="sr-only">Name</label>
-                  		  <input type="text" id="clientname" class="form-control" placeholder="Full Name">
-                	   </div>
-                  </div>
 
-                  <div class="col-sm-4">
-                	   <div class="form-group">
-                		     <label for="transactamt" class="sr-only">Transaction Value</label>
-                		     <input type="number" id="transactamt" class="form-control" placeholder="Transaction Value">
-                	   </div>
-                  </div>
-
-                  <div class ="col-sm-8">
-                	   <div class="form-group">
-                		     <label for="transactloc" class="sr-only">Transaction Location</label>
-                		     <input type="text" id="transactloc" class="form-control" placeholder="Location">
-                	   </div>
-                  </div>
-
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        <label for="transactdate" class="sr-only">Transaction Date</label>
-                        <input type="date" id="transactdate" class="form-control" placeholder="Date">
-                    </div>
-                </div>
-
-                <div class ="col-sm-8">
-                  <div class="form-group">
-                      <label for="transacttime" class="sr-only">Transaction Time</label>
-                      <input type="time" id="transacttime" class="form-control" placeholder="Time">
-                  </div>
-                </div>
-
-              </div>
-                <div class="modal-footer">
-                  <button type="submit" class="btn btn-default" data-dismiss="modal">Submit</button>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="../../assets/js/vendor/holder.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-
-
-    <div id="fixedfooter">Made for HackPrinceton 2016</div>
-
-  </body>
-</html>
+                      echo "<h4><center>Create a transaction for Account # ".$row['account_number'].", Phone #: ".$row['phone_number'].", Twitter ID ".$row['twitter_account'].".</center></h4>";
