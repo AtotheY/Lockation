@@ -20,7 +20,7 @@ $settings = array(
 
 		//setting up OAUTH info
 		// getting user Id's from previous page
-		$handle = '&screen_name=' . $_POST['user1'];
+		$handle = '&screen_name=' . $_POST['acc'];
   	$url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
 		$getfield = '?screen_name='.$handle;
 		$requestMethod = 'GET';
@@ -29,7 +29,6 @@ $settings = array(
     $result =  $twitter->setGetfield($getfield)
       ->buildOauth($url, $requestMethod)
       ->performRequest();
-
       var_dump($result);
 }
 	?>
