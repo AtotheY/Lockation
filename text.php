@@ -25,16 +25,16 @@ if ($conn -> connect_error)
 }
 
 $temp = $_REQUEST['From'];
-$from = substr($temp, 2, 9);
+$from = substr($temp, 2, 10);
 
 if ($_REQUEST['Body']=="yes" || $_REQUEST['Body']=="Yes")
 {
   $message = $client->account->messages->create(array(
       "From" =>"4387938609",
-      "To" => "4169516071",
+      "To" => $from,
       "Body" =>  "Your account has been cleared! Stay safe, and thanks for choosing Capital One. ttest: ". $from,
   ));
-  $test = mysqli_query ($conn, "UPDATE account_information SET status = '0' WHERE phone_number = '".$_SESSION."'");
+  $test = mysqli_query ($conn, "UPDATE account_information SET status = '0' WHERE phone_number = '".$from."'");
 
 
 }
@@ -43,10 +43,10 @@ else if ($_REQUEST['Body']=="no" || $_REQUEST['Body']=="No")
 {
   $message = $client->account->messages->create(array(
     "From" =>"4387938609",
-    "To" => $_REQUEST['from'],
+    "To" => $from,
     "Body" =>  "Capital One's financial investigators have been notified and your account has been temporarily locked.",
 ));
-$test = mysqli_query ($conn, "UPDATE account_information SET status = '2' WHERE phone_number = '".$_SESSION."'");
+$test = mysqli_query ($conn, "UPDATE account_information SET status = '2' WHERE phone_number = '".$from."'");
 
 }
 // Display a confirmation message on the screen
