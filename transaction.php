@@ -46,7 +46,7 @@
 
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 
-<![endif]-->
+<!-- [endif]-->
 
 </head>
 
@@ -61,6 +61,7 @@
 
 <?php
   $accnum = $_POST['acc'];
+  echo $accnum;
   error_reporting(E_ALL);
   ini_set('display_errors', 1);
   define ('DB_NAME', 'Lockation');
