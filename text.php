@@ -11,10 +11,9 @@ $client = new Services_Twilio($AccountSid, $AuthToken);
 $message = $client->account->messages->create(array(
     "From" =>"4387938609",
     "To" => "4169516071",
-    "Body" =>  "Test message!" . $_REQUEST['Body'],
+    "Body" =>  "Test message!" . $_REQUEST['Body'] ." DOES THIS SHOW A NUMBER: ".  $_REQUEST['From'],
 ));
 
 // Display a confirmation message on the screen
 echo "Sent message {$message->sid}";
 ?>
-

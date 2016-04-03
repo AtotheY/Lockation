@@ -70,6 +70,7 @@ if ($conn -> connect_error)
       exit();
     }
     else {
-        echo "approved";
+      header("Location: http://45.79.168.186/approved.php"); /* Redirect browser */
+      exit();
     }
 	?>
