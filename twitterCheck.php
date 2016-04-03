@@ -45,10 +45,7 @@ if ($conn -> connect_error)
       //$coord = $row['coordinates'];
       $geo = $row['geo'];
       $date = $row['created_at'];
-      foreach ($row['coordinates'] as $key)
-     {
-       echo $key;
-     }
+      $row['coordinates'];
       //var_dump($cords);
       //echo "coord: " . $coord;
       echo "geo: " . $geo;
