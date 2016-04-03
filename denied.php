@@ -66,7 +66,9 @@ session_start();
 <!--Form><![endif]-->
 
 <div class ="col-sm-12">
-  <button class="btn btn-lg btn-warning btn-block" type="submit">Back to Dashboard</button>
+  <form action = "index.php">
+    <button class="btn btn-lg btn-warning btn-block" type="submit">Back to Dashboard</button>
+  </form>
 </div>
  <!-- /container -->
 
