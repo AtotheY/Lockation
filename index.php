@@ -92,10 +92,10 @@ session_start();
 
                   }
                   else if ($msg == 1)
-                    echo"<td><div class = 'buttonHolder'><button class='btn btn-xs btn-warning' type='submit'>Clear Waiting</button></div></td></tr>";
+                    echo"<td><form action = 'unwait.php' method = 'post'><button class='btn btn-xs btn-warning' value = '".$acc."' name = 'acc' type='submit'>Clear Waiting</button></form></td></tr>";
                   else
                   {
-                        echo"<td><div class = 'buttonHolder'><form action ='unlocked.php' method='post'/><button class='btn btn-xs btn-warning' type='submit'>Unlock Account</button></div></form></td></tr>";
+                        echo"<td><form action ='unlocked.php' method='post'/><button class='btn btn-xs btn-warning' name = 'acc' value = '".$acc."'type='submit'>Unlock Account</button></form></td></tr>";
                   }
                 }
                 mysqli_close($conn);
@@ -133,6 +133,7 @@ session_start();
 
                     $test = mysqli_query ($conn, "SELECT * FROM account_information WHERE account_number = '".$accnum."'");
                     $row = $test->fetch_assoc();
+
                     echo "<h4><center>Create a transaction for Account # ".$row['account_number'].", Phone #: ".$row['phone_number'].", Twitter ID ".$row['twitter_account'].".</center></h4>";
                   ?>
                   <div class="col-sm-12">
@@ -194,6 +195,3 @@ session_start();
 
 
     <div id="fixedfooter">Made for HackPrinceton 2016 | In collaboration with CapitalOne</div>
-
-  </body>
-</html>

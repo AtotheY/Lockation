@@ -18,7 +18,7 @@
 <link rel="icon" href="../../favicon.ico">
 
 
-<title>Flock | Account Unlocked</title>
+<title>GetFlocked | Clear any Response Waiting</title>
 
 
 <?php
@@ -26,8 +26,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 $accnum = $_POST['acc'];
-define ('DB_NAME', 'Lockation');
 define ('DB_USER', 'root');
+define ('DB_NAME', 'Lockation');
 define ('DB_PASSWORD', '.....1');
 define ('DB_HOST', 'localhost');
 
@@ -51,7 +51,7 @@ $test = mysqli_query ($conn, "UPDATE account_information SET status = '0' WHERE 
 <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
-<link href="main.css" rel="stylesheet">
+<link href="C:\Users\Susie\Documents\Lockation\css\bootstrap.min.css" rel="stylesheet">
 
 <link href="main.css" rel="stylesheet">
 
@@ -73,13 +73,13 @@ $test = mysqli_query ($conn, "UPDATE account_information SET status = '0' WHERE 
 <body>
   <div data-role="page">
   <div data-role="header" data-position="fixed">
-    <center><img src="header.png" style="width:140px;height:140px"></center>
+    <center><img src="header.png"></center>
   </div>
 <!--Title><![endif]-->
 
 <div class="container">
-<h1><center>Account Unlocked</center></h1>
-<h4><center>Your account has been unlocked. Hurray!</center></h4>
+<h1><center>Account Un-Waited</center></h1>
+<h4><center>Your account is no longer waiting on a response. Yay!</center></h4>
 
 <!--Form><![endif]-->
 
@@ -95,7 +95,7 @@ $test = mysqli_query ($conn, "UPDATE account_information SET status = '0' WHERE 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 
 <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-<div id="fixedfooter">Made for HackPrinceton 2016 | In collaboration with CapitalOne</div>
+
 </body>
 
 
