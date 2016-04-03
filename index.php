@@ -23,7 +23,7 @@ session_start();
 
   <body>
     <div data-role="header" data-position="fixed" id="fixedheader">
-      <center><img src="header.png"></center>
+      <center><img src="header.png" style="width:125px;height:125px"></center>
     </div>
 
     <h2 class="sub-header"><center>Dashboard</center></h2>
