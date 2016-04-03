@@ -74,7 +74,7 @@
   {
     die("Connection failed: ". $conn ->connect_error);
   }
-  $test = mysqli_query ($conn, "SELECT * FROM account_information WHERE account_number = '123456789'");
+  $test = mysqli_query ($conn, "SELECT * FROM account_information WHERE account_number = '".$accnum."'");
   var_dump($test);
   echo "***************";
   $row = $test->fetch_assoc();
