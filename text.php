@@ -28,7 +28,7 @@ if ($_REQUEST['Body']=='yes')
 {
   $message = $client->account->messages->create(array(
       "From" =>"4387938609",
-      "To" => $_SESSION['phone'],
+      "To" => $_REQUEST['from'],
       "Body" =>  "Your account has been cleared! Stay safe, and thanks for choosing Capital One.",
   ));
   $test = mysqli_query ($conn, "UPDATE account_information SET status = '0' WHERE phone_number = '".$_SESSION."'");
@@ -39,7 +39,7 @@ else if ($_REQUEST['Body']=='no')
 {
   $message = $client->account->messages->create(array(
     "From" =>"4387938609",
-    "To" => $_SESSION['phone'],
+    "To" => $_REQUEST['from'],
     "Body" =>  "Capital One's financial investigators have been notified and your account has been temporarily locked.",
 ));
 $test = mysqli_query ($conn, "UPDATE account_information SET status = '2' WHERE phone_number = '".$_SESSION."'");
