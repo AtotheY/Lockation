@@ -59,7 +59,7 @@
 
 <div class="container">
 <h2><center>New Transaction</center></h2>
-<h4><center>Create a transaction for Account #, @anon_1, Bank Account ###.</center></h4>
+<h4><center>Create a transaction for Account #, Phone #: <?php echo $_POST['phone']; ?>, Bank Account ###.</center></h4>
 
 <!--Form><![endif]-->
 <form role="form">
