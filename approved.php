@@ -32,8 +32,8 @@
 </head>
 
 <body>
-  <div data-role="page">
-  <div data-role="header" data-position="fixed">
+
+  <div data-role="header" data-position="fixed" id="fixedheader">
     <center><img src="header.png"></center>
   </div>
 <!--Title><![endif]-->
@@ -51,5 +51,8 @@
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 
 <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+<div id="fixedfooter">Made for HackPrinceton 2016</div>
+
 </body>
 </html>
