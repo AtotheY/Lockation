@@ -46,5 +46,8 @@ if ($conn -> connect_error)
       //$coord = $row['coordinates'];
       $geo = $row['geo'];
       $date = $row['created_at'];
+      $place = $row['place'];
+      if ($place != null)
+        echo "ANTHONY". " ". $place['name'];
     }
 	?>
