@@ -26,8 +26,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 $accnum = $_POST['acc'];
-define ('DB_NAME', 'Lockation');
 define ('DB_USER', 'root');
+define ('DB_NAME', 'Lockation');
 define ('DB_PASSWORD', '.....1');
 define ('DB_HOST', 'localhost');
 
@@ -84,7 +84,7 @@ $test = mysqli_query ($conn, "UPDATE account_information SET status = '0' WHERE 
 <!--Form><![endif]-->
 
 <div class ="col-sm-12">
-  <form action = "dashboard.php">
+  <form action = "index.php">
     <button class="btn btn-lg btn-warning btn-block" type="submit">Back to Dashboard</button>
   </form>
 </div>
