@@ -61,6 +61,10 @@ if ($conn -> connect_error)
         break;
     }
     $userLoc =  $_POST['transactloc'];
+    $_SESSION["last"] = $userLoc;
+    $_SESSION['time'] = $_POST['transacttime'];
+    $_SESSION['date'] = $_POST['transactdate'];
+    $_SESSION['val'] = $_POST['transactamt'];
 
     if ($userLoc != $newPlace)
     {

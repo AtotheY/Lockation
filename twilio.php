@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 
 require "twilio/Services/Twilio.php";
 
@@ -10,8 +13,9 @@ $client = new Services_Twilio($AccountSid, $AuthToken);
 
 $message = $client->account->messages->create(array(
     "From" =>"4387938609",
-    "To" => "4163199283",
-    "Body" => "Test message!",
+    "To" => $_SESSION['phone'],
+    "Body" => "Hey from Capital One! A recent transaction has been flagged as suspicious. Please reply with 'yes' or 'no' to whether or not you authorized the following
+    transaction: ".$_SESSION['date'] ." at ". $_SESSION['time'] ." for $" . $_SESSION['val'] . " in " . $_SESSION['last'],
 ));
 
 // Display a confirmation message on the screen

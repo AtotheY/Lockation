@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -58,7 +61,7 @@
 <!--Title><![endif]-->
 <div class="container">
 <h1><center>Transaction Denied</center></h1>
-<h4><center>Latest Tweet Location: New York<br>Time Elapsed: 2:00:00 <br> Minimum Travel Time: 3:00:00</center></h4>
+<h4><center>Latest Tweet Location: <?php echo $_SESSION['last']; ?></center></h4>
 
 <!--Form><![endif]-->
 
