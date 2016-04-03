@@ -83,7 +83,7 @@
                   echo"<td align = 'center' valign = 'middle'> ".$status." </td>";
                   if ($msg == 0)
                   {
-                    echo"<td><form action ='transaction.php' method='post'/><button type = 'submit' value = '".$acc."class='btn btn-xs btn-warning' name ='acc'>Create Transaction</button>
+                    echo"<td><form action ='transaction.php' method='post'/><button type = 'button' data-toggle='modal' data-target='#transactionForm'value = '".$acc."class='btn btn-xs btn-warning' name ='acc'>Create Transaction</button>
                     </form></td></tr>";
                   }
                   else if ($msg == 1)
@@ -110,7 +110,26 @@
                   <h4 class="modal-title">Enter Transaction</h4>
                 </div>
                 <div class="modal-body">
-                    <p><center>Create a transaction for @anon_1</center></p><p></p>
+                  <?php
+                    $accnum = $_POST['acc'];
+                    echo $accnum;
+                    error_reporting(E_ALL);
+                    ini_set('display_errors', 1);
+                    define ('DB_NAME', 'Lockation');
+                    define ('DB_USER', 'root');
+                    define ('DB_PASSWORD', '.....1');
+                    define ('DB_HOST', 'localhost');
+
+                    $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+                    if ($conn -> connect_error)
+                    {
+                      die("Connection failed: ". $conn ->connect_error);
+                    }
+
+                    $test = mysqli_query ($conn, "SELECT * FROM account_information WHERE account_number = '".$accnum."'");
+                    $row = $test->fetch_assoc();
+                    echo "<h4><center>Create a transaction for Account # ".$row['account_number'].", Phone #: ".$row['phone_number'].", Twitter ID ".$row['twitter_account'].".</center></h4>";
+                  ?>
                   <div class="col-sm-12">
                 	   <div class="form-group">
                   		  <label for="clientname" class="sr-only">Name</label>
