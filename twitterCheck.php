@@ -8,8 +8,7 @@ $settings = array(
     'oauth_access_token' => "	962554652-W3uFUXOMI6UYffcRTConjYBDY3QkcbqH6QBjqE0u",
     'oauth_access_token_secret' => "DaurNka3j8r9Yc6ALwIxMJdyJZLFGdVhweIRHnosL31Jw",
     'consumer_key' => "KdRTI0oBAIk94w7PiofD0cmo7",
-    'consumer_secret' => "xIN5Musw80Rlip31To4Gnfx4cZUm2KEoH500hkoLoUL7gmil1y
-"
+    'consumer_secret' => "xIN5Musw80Rlip31To4Gnfx4cZUm2KEoH500hkoLoUL7gmil1y"
 );
 
 $accnum = $_POST['acc'];
