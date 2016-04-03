@@ -74,7 +74,7 @@
   {
     die("Connection failed: ". $conn ->connect_error);
   }
-  
+
   $test = mysqli_query ($conn, "SELECT * FROM account_information WHERE account_number = '".$accnum."'");
   $row = $test->fetch_assoc();
   echo "<h4><center>Create a transaction for Account # ".$row['account_number'].", Phone #: ".$row['phone_number'].", Twitter ID ".$row['twitter_account'].".</center></h4>";
@@ -121,6 +121,14 @@
 
 </form>
 <div class ="col-sm-12">
+  <?php
+  $accnum = $_POST['acc'];
+
+
+
+  echo "<form action ='twitterCheck.php' method='post'/><button type = 'submit' value = '".$accnum."' class='btn btn-xs btn-warning' name ='acc'>Submit Transaction</button>
+  </form>";
+   ?>
   <button class="btn btn-lg btn-warning btn-block" type="submit">Create Transaction</button>
 </div>
  <!-- /container -->

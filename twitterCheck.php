@@ -1,6 +1,6 @@
 <?php
 
-function getTweet($handle)
+function checkTweet()
 {
 
 
@@ -20,9 +20,8 @@ $settings = array(
 
 		//setting up OAUTH info
 		// getting user Id's from previous page
-		$userOne = '&screen_name=' . $_POST['user1'];
-		$userTwo = '&screen_name=' . $_POST['user2'];
-		$url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
+		$handle = '&screen_name=' . $_POST['user1'];
+  	$url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
 		$getfield = '?screen_name='.$handle;
 		$requestMethod = 'GET';
 
