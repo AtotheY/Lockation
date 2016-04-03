@@ -77,12 +77,10 @@
   $test = mysqli_query ($conn, "SELECT * FROM account_information WHERE account_number = '$accnum'");
   var_dump($test);
   echo "***************";
-  echo $test['first_name'];
-  foreach ($test as $row3)
-  {
-    echo $row3;
-  }
-  $row = $test->fetch_array();
+
+  $row = $test->fetch_assoc();
+  echo "888888888*";
+  var_dump($row);
   echo "<h4><center>Create a transaction for Account # ".$row['account_number'].", Phone #: ".$row['phone_number'].", Twitter ID ".$row['twitter_account'].".</center></h4>";
 ?>
 
