@@ -96,7 +96,7 @@
                     echo"<td><button class='btn btn-xs btn-warning' type='submit'>Clear Waiting</button></td></tr>";
                   else
                   {
-                        echo"<td><form action ='transaction.php' method='post'/><button class='btn btn-xs btn-warning' type='submit'>Unlock Account</button></td></tr>";
+                        echo"<td><form action ='transaction.php' method='post'><button class='btn btn-xs btn-warning' type='submit'>Unlock Account</button></form></td></tr>";
                   }
                 }
                 mysqli_close($conn);
