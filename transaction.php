@@ -74,7 +74,7 @@
   {
     die("Connection failed: ". $conn ->connect_error);
   }
-  $test = mysqli_query ($conn, "SELECT * FROM account_information WHERE account_number = ".$_POST['acc']);
+  $test = mysqli_query ($conn, "SELECT * FROM account_information WHERE account_number = ''".$_POST['acc']."'");
   var_dump($test);
 ?>
 
