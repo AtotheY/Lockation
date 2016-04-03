@@ -64,6 +64,7 @@ if ($conn -> connect_error)
 
     if ($userLoc != $newPlace)
     {
+      $test = mysqli_query ($conn, "UPDATE account_information SET status = '1' WHERE account_number = '".$accnum."'");
       include 'twilio.php';
       header("Location: http://45.79.168.186/denied.php"); /* Redirect browser */
       exit();

@@ -31,7 +31,7 @@
 <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
-<link href="C:\Users\Susie\Documents\Lockation\css\bootstrap.min.css" rel="stylesheet">
+<link href="\css\bootstrap.min.css" rel="stylesheet">
 
 <link href="main.css" rel="stylesheet">
 
