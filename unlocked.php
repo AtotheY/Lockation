@@ -18,7 +18,7 @@
 <link rel="icon" href="../../favicon.ico">
 
 
-<title>Lockation | Account Unlocked</title>
+<title>Flock | Account Unlocked</title>
 
 
 <?php
@@ -51,7 +51,7 @@ $test = mysqli_query ($conn, "UPDATE account_information SET status = '0' WHERE 
 <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
-<link href="C:\Users\Susie\Documents\Lockation\css\bootstrap.min.css" rel="stylesheet">
+<link href="main.css" rel="stylesheet">
 
 <link href="main.css" rel="stylesheet">
 
@@ -73,7 +73,7 @@ $test = mysqli_query ($conn, "UPDATE account_information SET status = '0' WHERE 
 <body>
   <div data-role="page">
   <div data-role="header" data-position="fixed">
-    <center><img src="header.png"></center>
+    <center><img src="header.png" style="width:140px;height:140px"></center>
   </div>
 <!--Title><![endif]-->
 
@@ -95,7 +95,7 @@ $test = mysqli_query ($conn, "UPDATE account_information SET status = '0' WHERE 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 
 <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-
+<div id="fixedfooter">Made for HackPrinceton 2016 | In collaboration with CapitalOne</div>
 </body>
 
 

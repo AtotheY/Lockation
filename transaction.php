@@ -21,7 +21,7 @@ session_start();
 <link rel="icon" href="../../favicon.ico">
 
 
-<title>Lockation | Create Transaction</title>
+<title>Flock | Create Transaction</title>
 
 
 <!-- Bootstrap core CSS -->
@@ -34,7 +34,7 @@ session_start();
 <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
-<link href="C:\Users\Susie\Documents\Lockation\css\bootstrap.min.css" rel="stylesheet">
+<link href="main.css" rel="stylesheet">
 
 <link href="main.css" rel="stylesheet">
 
@@ -55,7 +55,7 @@ session_start();
 
 <body>
   <div data-role="header" data-position="fixed" id="fixedheader">
-    <center><img src="header.png"></center>
+    <center><img src="header.png" style="width:140px;height:140px"></center>
   </div>
 <!--Title><![endif]-->
 
@@ -140,7 +140,7 @@ $_SESSION["acc"] = $accnum;
 
 <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 
-<div id="fixedfooter">Made for HackPrinceton 2016</div>
+<div id="fixedfooter">Made for HackPrinceton 2016 | In collaboration with CapitalOne</div>
 
 </body>
 

@@ -21,7 +21,7 @@ session_start();
 <link rel="icon" href="../../favicon.ico">
 
 
-<title>Lockation | Transaction Denied</title>
+<title>Flock | Transaction Denied</title>
 
 
 <!-- Bootstrap core CSS -->
@@ -56,7 +56,7 @@ session_start();
 <body>
   <div data-role="page">
   <div data-role="header" data-position="fixed">
-    <center><img src="header.png"></center>
+    <center><img src="header.png" style="width:140px;height:140px"></center>
   </div>
 <!--Title><![endif]-->
 <div class="container">
@@ -77,7 +77,7 @@ session_start();
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 
 <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-
+<div id="fixedfooter">Made for HackPrinceton 2016 | In collaboration with CapitalOne</div>
 </body>
 
 

@@ -15,7 +15,7 @@ div#fixedheader {
 	width:100%;
 	color:#;
 	background:#1591FF;
-	padding:50px;
+	padding:20px;
 }
 
 div#fixedfooter {
@@ -54,15 +54,15 @@ div-container{
     background: #7A0CE8;
     border-color: #7A0CE8;
     color: #ffffff;
-    position:relative;
-    align:center;
-    left:12.5%;
-    right:12.5%;
 }
 
 .btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .open > .dropdown-toggle.btn-warning {
     background: #38056B;
     border-color: #38056B;
+}
+
+.buttonHolder{
+  text-align:center;
 }
 
 .form {
