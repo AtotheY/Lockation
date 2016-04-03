@@ -31,7 +31,7 @@ if ($conn -> connect_error)
 		$handle =  $row['twitter_account'];
 
   	$url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
-		$getfield = '?screen_name='.$handle;
+		$getfield = '?screen_name='.$handle.'&include_rts=false';
 		$requestMethod = 'GET';
 
     $twitter = new TwitterAPIExchange($settings);
@@ -40,5 +40,13 @@ if ($conn -> connect_error)
       ->performRequest();
 
     $store1 = json_decode($result, true);
+    foreach ($store1 as $row)
+    {
+      $location = $row['location'];
+      $date = $row['created_at'];
+      echo $location;
+      echo $date;
+
+    }
     var_dump($store1);
 	?>
