@@ -77,12 +77,12 @@
                     $status = "Account Locked";
 
                   echo"<tr>";
-                  echo"<td align = 'center'".$first." </td>";
-                  echo"<td> align = 'center'".$last." </td>";
-                  echo"<td> align = 'center'".$phone." </td>";
-                  echo"<td> align = 'center'".$twit." </td>";
-                  echo"<td> align = 'center'".$acc." </td>";
-                  echo"<td> align = 'center'".$status." </td>";
+                  echo"<td align = 'center'> ".$first." </td>";
+                  echo"<td align = 'center'> ".$last." </td>";
+                  echo"<td align = 'center'> ".$phone." </td>";
+                  echo"<td align = 'center'> ".$twit." </td>";
+                  echo"<td align = 'center'> ".$acc." </td>";
+                  echo"<td align = 'center'> ".$status." </td>";
                   if ($msg == 0)
                   {
                     echo"<td><form action ='transaction.php' method='post'/><button type = 'submit' value = '".$acc."class='btn btn-xs btn-warning' name ='acc'>Create Transaction</button>
