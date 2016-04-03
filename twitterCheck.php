@@ -42,9 +42,13 @@ if ($conn -> connect_error)
     $store1 = json_decode($result, true);
     foreach ($store1 as $row)
     {
-      $location = $row['location'];
+      $user = $row->user
+      foreach ($user as $row2)
+      {
+        $location = $row2['location'];
+        echo $location;
+      }
       $date = $row['created_at'];
-      echo $location;
       echo $date;
 
     }
