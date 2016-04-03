@@ -12,10 +12,24 @@ $settings = array(
 "
 );
 
-  echo "TEST";
-		//setting up OAUTH info
+$accnum = $_POST['acc'];
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+define ('DB_NAME', 'Lockation');
+define ('DB_USER', 'root');
+define ('DB_PASSWORD', '.....1');
+define ('DB_HOST', 'localhost');
+
+$conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+if ($conn -> connect_error)
+{
+  die("Connection failed: ". $conn ->connect_error);
+}
+
+    $test = mysqli_query ($conn, "SELECT * FROM account_information WHERE account_number = '".$accnum."'");
+    $row = $test->fetch_assoc();
 		// getting user Id's from previous page
-		$handle = '&screen_name=' . $_POST['acc'];
+		$handle =  $row['twitter_account'];
     echo "TEST2: handle : ". $handle;
   	$url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
 		$getfield = '?screen_name='.$handle;
