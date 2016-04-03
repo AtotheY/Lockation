@@ -81,9 +81,7 @@
 
 
 <!--Form><![endif]-->
-<?php
-echo '
-<form action = "twitterCheck.php" method = "post">
+<form action = 'twitterCheck.php' method = 'post'>
 
 	<div class="col-sm-12">
 	<div class="form-group">
@@ -119,11 +117,14 @@ echo '
   <input type="time" id="transacttime" class="form-control" placeholder="Time" required="true">
 </div>
 </div>
-';
+<input type="submit" value="Submit">
+
+<?php
 $accnum = $_POST['acc'];
-echo "<button type = 'submit' value = '".$accnum."' class='btn btn-xs btn-warning btn-block' name ='acc'>Submit Transaction</button>";
-echo "</form>";
+$_SESSION["acc"] = $accnum;
+
  ?>
+</form>
  <!-- /container -->
 
 

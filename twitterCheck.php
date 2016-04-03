@@ -11,7 +11,7 @@ $settings = array(
     'consumer_secret' => "xIN5Musw80Rlip31To4Gnfx4cZUm2KEoH500hkoLoUL7gmil1y"
 );
 
-$accnum = $_POST['acc'];
+$accnum = $_SESSION["acc"];
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 define ('DB_NAME', 'Lockation');
