@@ -24,7 +24,7 @@ if ($conn -> connect_error)
   die("Connection failed: ". $conn ->connect_error);
 }
 
-if ($_REQUEST['Body']=='yes')
+if ($_REQUEST['Body']=="yes" || $_REQUEST['Body']=="Yes")
 {
   $message = $client->account->messages->create(array(
       "From" =>"4387938609",
@@ -35,7 +35,8 @@ if ($_REQUEST['Body']=='yes')
 
 
 }
-else if ($_REQUEST['Body']=='no')
+else if ($_REQUEST['Body']=="no" || $_REQUEST['Body']=="No")
+
 {
   $message = $client->account->messages->create(array(
     "From" =>"4387938609",
