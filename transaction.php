@@ -61,7 +61,7 @@
 <h2><center>New Transaction</center></h2>
 
 <?php
-  echo $_POST['acc'];
+  $accnum = $_POST['acc'];
   error_reporting(E_ALL);
   ini_set('display_errors', 1);
   define ('DB_NAME', 'Lockation');
@@ -74,7 +74,7 @@
   {
     die("Connection failed: ". $conn ->connect_error);
   }
-  $test = mysqli_query ($conn, "SELECT * FROM account_information WHERE account_number = ''".$_POST['acc']."'");
+  $test = mysqli_query ($conn, "SELECT * FROM account_information WHERE account_number = '$accnum'");
   var_dump($test);
 ?>
 
