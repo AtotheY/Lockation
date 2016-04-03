@@ -91,7 +91,7 @@ session_start();
 
                   }
                   else if ($msg == 1)
-                    echo"<td><button class='btn btn-xs btn-warning' value = '".$acc."' type='submit'>Clear Waiting</button></td></tr>";
+                    echo"<td><form action = 'unwait.php'><button class='btn btn-xs btn-warning' value = '".$acc."' type='submit'>Clear Waiting</button></form></td></tr>";
                   else
                   {
                         echo"<td><form action ='unlocked.php' method='post'/><button class='btn btn-xs btn-warning' value = '".$acc."'type='submit'>Unlock Account</button></form></td></tr>";
@@ -194,5 +194,3 @@ session_start();
 
 
     <div id="fixedfooter">Made for HackPrinceton 2016 | In collaboration with CapitalOne</div>
-
-                      echo "<h4><center>Create a transaction for Account # ".$row['account_number'].", Phone #: ".$row['phone_number'].", Twitter ID ".$row['twitter_account'].".</center></h4>";
