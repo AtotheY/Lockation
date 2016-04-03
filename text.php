@@ -24,12 +24,13 @@ if ($conn -> connect_error)
   die("Connection failed: ". $conn ->connect_error);
 }
 
+
 if ($_REQUEST['Body']=="yes" || $_REQUEST['Body']=="Yes")
 {
   $message = $client->account->messages->create(array(
       "From" =>"4387938609",
       "To" => "4169516071",
-      "Body" =>  "Your account has been cleared! Stay safe, and thanks for choosing Capital One.",
+      "Body" =>  "Your account has been cleared! Stay safe, and thanks for choosing Capital One. ttest: ". $_REQUEST['From'].",
   ));
   $test = mysqli_query ($conn, "UPDATE account_information SET status = '0' WHERE phone_number = '".$_SESSION."'");
 
