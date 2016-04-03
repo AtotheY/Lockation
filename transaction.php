@@ -76,7 +76,7 @@
   }
   $test = mysqli_query ($conn, "SELECT * FROM account_information WHERE account_number = '$accnum'");
   var_dump($test);
-  $row = mysqli_fetch_array($test);
+  $row = mysqli_fetch_assoc($test);
   echo "<h4><center>Create a transaction for Account # ".$row['account_number'].", Phone #: ".$row['phone_number'].", Twitter ID ".$row['twitter_account'].".</center></h4>";
 ?>
 
