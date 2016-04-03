@@ -23,7 +23,7 @@ session_start();
 
   <body>
     <div data-role="header" data-position="fixed" id="fixedheader">
-      <center><img src="header.png" style="width:125px;height:125px"></center>
+      <center><img src="header.png" style="width:125px;height:140px"></center>
     </div>
 
     <h2 class="sub-header"><center>Dashboard</center></h2>
@@ -87,14 +87,14 @@ session_start();
                   if ($msg == 0)
                   {
 
-                    echo"<td><form action ='transaction.php' method='post'/><button type = 'submit' value = '".$acc."' class='btn btn-xs btn-warning' name ='acc'>Create Transaction</button></form></td></tr>";
+                    echo"<td><form action ='transaction.php' method='post'/><div class = 'buttonHolder'><button type = 'submit' value = '".$acc."' class='btn btn-xs btn-warning' name ='acc'>Create Transaction</button></div></form></td></tr>";
 
                   }
                   else if ($msg == 1)
-                    echo"<td><button class='btn btn-xs btn-warning' type='submit'>Clear Waiting</button></td></tr>";
+                    echo"<td><div class = 'buttonHolder'><button class='btn btn-xs btn-warning' type='submit'>Clear Waiting</button></div></td></tr>";
                   else
                   {
-                        echo"<td><form action ='unlocked.php' method='post'/><button class='btn btn-xs btn-warning' type='submit'>Unlock Account</button></form></td></tr>";
+                        echo"<td><div class = 'buttonHolder'><form action ='unlocked.php' method='post'/><button class='btn btn-xs btn-warning' type='submit'>Unlock Account</button></div></form></td></tr>";
                   }
                 }
                 mysqli_close($conn);
@@ -192,7 +192,7 @@ session_start();
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 
 
-    <div id="fixedfooter">Made for HackPrinceton 2016</div>
+    <div id="fixedfooter">Made for HackPrinceton 2016 | In collaboration with CapitalOne</div>
 
   </body>
 </html>

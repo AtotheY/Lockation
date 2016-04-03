@@ -34,7 +34,7 @@ session_start();
 <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
-<link href="C:\Users\Susie\Documents\Lockation\css\bootstrap.min.css" rel="stylesheet">
+<link href="main.css" rel="stylesheet">
 
 <link href="main.css" rel="stylesheet">
 
@@ -55,7 +55,7 @@ session_start();
 
 <body>
   <div data-role="header" data-position="fixed" id="fixedheader">
-    <center><img src="header.png"></center>
+    <center><img src="header.png" style="width:125px;height:140px"></center>
   </div>
 <!--Title><![endif]-->
 
@@ -82,7 +82,7 @@ session_start();
   echo "<h4><center>Create a transaction for Account # ".$row['account_number'].", Phone #: ".$row['phone_number'].", Twitter ID ".$row['twitter_account'].".</center></h4>";
   $_SESSION["phone"] = $row['phone_number'];
   $_SESSION["twitter"] = $row['twitter_account'];
-  
+
 
 ?>
 
@@ -140,7 +140,7 @@ $_SESSION["acc"] = $accnum;
 
 <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 
-<div id="fixedfooter">Made for HackPrinceton 2016</div>
+<div id="fixedfooter">Made for HackPrinceton 2016 | In collaboration with CapitalOne</div>
 
 </body>
 

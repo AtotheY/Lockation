@@ -31,7 +31,7 @@
 <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
-<link href="C:\Users\Susie\Documents\Lockation\css\bootstrap.min.css" rel="stylesheet">
+<link href="main.css" rel="stylesheet">
 
 <link href="main.css" rel="stylesheet">
 
@@ -53,7 +53,7 @@
 <body>
   <div data-role="page">
   <div data-role="header" data-position="fixed">
-    <center><img src="header.png"></center>
+    <center><img src="header.png" style="width:125px;height:140px"></center>
   </div>
 <!--Title><![endif]-->
 
@@ -73,7 +73,7 @@
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 
 <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-
+<div id="fixedfooter">Made for HackPrinceton 2016 | In collaboration with CapitalOne</div>
 </body>
 
 

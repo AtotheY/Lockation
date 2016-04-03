@@ -24,6 +24,8 @@
 
 <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 
+<link href="main.css" rel="stylesheet">
+
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -36,7 +38,7 @@
 <body>
 
   <div data-role="header" data-position="fixed" id="fixedheader">
-    <center><img src="header.png"></center>
+    <center><img src="header.png" style="width:125px;height:140px"></center>
   </div>
 <!--Title><![endif]-->
 <div class="container">
@@ -54,7 +56,7 @@
 
 <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 
-<div id="fixedfooter">Made for HackPrinceton 2016</div>
+<div id="fixedfooter">Made for HackPrinceton 2016 | In collaboration with CapitalOne</div>
 
 </body>
 </html>
