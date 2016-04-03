@@ -32,13 +32,13 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th align = 'center' valign = 'center'>Fisrt Name</th>
-                  <th align = 'center' valign = 'center'>Last Name</th>
-                  <th align = 'center' valign = 'center'>Account Number</th>
-                  <th align = 'center' valign = 'center'>Twitter</th>
-                  <th align = 'center' valign = 'center'>Bank Account Number</th>
-                  <th align = 'center' valign = 'center'>Status</th>
-                  <th align = 'center' valign = 'center'>Action</th>
+                  <th align = 'center' valign = 'middle'>Fisrt Name</th>
+                  <th align = 'center' valign = 'middle'>Last Name</th>
+                  <th align = 'center' valign = 'middle'>Account Number</th>
+                  <th align = 'center' valign = 'middle'>Twitter</th>
+                  <th align = 'center' valign = 'middle'>Bank Account Number</th>
+                  <th align = 'center' valign = 'middle'>Status</th>
+                  <th align = 'center' valign = 'middle'>Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -77,12 +77,12 @@
                     $status = "Account Locked";
 
                   echo"<tr>";
-                  echo"<td align = 'center' valign = 'center'> ".$first." </td>";
-                  echo"<td align = 'center' valign = 'center'> ".$last." </td>";
-                  echo"<td align = 'center' valign = 'center'> ".$phone." </td>";
-                  echo"<td align = 'center' valign = 'center'> ".$twit." </td>";
-                  echo"<td align = 'center' valign = 'center'> ".$acc." </td>";
-                  echo"<td align = 'center' valign = 'center'> ".$status." </td>";
+                  echo"<td align = 'center' valign = 'middle'> ".$first." </td>";
+                  echo"<td align = 'center' valign = 'middle'> ".$last." </td>";
+                  echo"<td align = 'center' valign = 'middle'> ".$phone." </td>";
+                  echo"<td align = 'center' valign = 'middle'> ".$twit." </td>";
+                  echo"<td align = 'center' valign = 'middle'> ".$acc." </td>";
+                  echo"<td align = 'center' valign = 'middle'> ".$status." </td>";
                   if ($msg == 0)
                   {
                     echo"<td><form action ='transaction.php' method='post'/><button type = 'submit' value = '".$acc."class='btn btn-xs btn-warning' name ='acc'>Create Transaction</button>
