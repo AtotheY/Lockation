@@ -48,6 +48,7 @@ if ($conn -> connect_error)
       //echo "coord: " . $coord;
       echo "geo: " . $geo;
       var_dump($geo);
+      echo "** ".$geo['coordinates']." **";
       echo "date: " . $date;
 
     }
