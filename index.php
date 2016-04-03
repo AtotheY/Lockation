@@ -91,9 +91,10 @@
                   echo"<td> ".$acc." </td>";
                   echo"<td> ".$status." </td>";
                   if ($msg == 0)
-                    echo"<td><form action ='transaction.php' method='post'/><button class='btn btn-xs btn-warning' type='submit'>Create Transaction</button>
-                    <input id='phone' type='hidden'  value = '".$phone."'>
+                  {
+                    echo"<td><form action ='transaction.php' method='post'/><button name = 'phone' value = '".$phone."class='btn btn-xs btn-warning' type='submit'>Create Transaction</button>
                     </form></td></tr>";
+                  }
                   else if ($msg == 1)
                     echo"<td><button class='btn btn-xs btn-warning' type='submit'>Clear Waiting</button></td></tr>";
                   else
