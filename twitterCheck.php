@@ -47,6 +47,7 @@ if ($conn -> connect_error)
       $date = $row['created_at'];
       //echo "coord: " . $coord;
       echo "geo: " . $geo;
+      var_dump($geo);
       echo "date: " . $date;
 
     }
