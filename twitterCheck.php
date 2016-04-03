@@ -40,14 +40,19 @@ if ($conn -> connect_error)
       ->performRequest();
 
     $store1 = json_decode($result, true);
-    var_dump($store1);
+    //var_dump($store1);
+    $done = false;
     foreach ($store1 as $row)
     {
-      //$coord = $row['coordinates'];
       $geo = $row['geo'];
       $date = $row['created_at'];
       $place = $row['place'];
       if ($place != null)
+      {
         echo "ANTHONY". " ". $place['name'];
+        $done = true;
+      }
+      if ($done)
+        break;
     }
 	?>
