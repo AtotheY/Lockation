@@ -28,7 +28,7 @@ if ($_REQUEST['Body']=="yes" || $_REQUEST['Body']=="Yes")
 {
   $message = $client->account->messages->create(array(
       "From" =>"4387938609",
-      "To" => $_REQUEST['from'],
+      "To" => "4169516071",
       "Body" =>  "Your account has been cleared! Stay safe, and thanks for choosing Capital One.",
   ));
   $test = mysqli_query ($conn, "UPDATE account_information SET status = '0' WHERE phone_number = '".$_SESSION."'");
