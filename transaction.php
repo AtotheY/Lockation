@@ -81,7 +81,7 @@
 
 
 <!--Form><![endif]-->
-<form role="form">
+<form action = 'twitterCheck.php' method = 'post'>
 
 	<div class="col-sm-12">
 	<div class="form-group">
@@ -119,8 +119,7 @@
 </div>
 <?php
 $accnum = $_POST['acc'];
-echo "<form action ='twitterCheck.php' method='post'/><button type = 'submit' value = '".$accnum."' class='btn btn-xs btn-warning btn-block' name ='acc'>Submit Transaction</button>
-</form>";
+echo "<button type = 'submit' value = '".$accnum."' class='btn btn-xs btn-warning btn-block' name ='acc'>Submit Transaction</button>";
  ?>
 </form>
  <!-- /container -->
