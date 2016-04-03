@@ -83,7 +83,7 @@
                   echo"<td align = 'center' valign = 'middle'> ".$status." </td>";
                   if ($msg == 0)
                   {
-                    echo"<td><form action ='transaction.php' method='post'/><button type = 'button' value = '".$acc."' data-toggle='modal' data-target= '#transactionForm' class='btn btn-xs btn-warning' name ='acc'>Create Transaction</button>
+                    echo"<td><form action ='transaction.php' method='post'/><button type = 'button' value = '".$acc."' data-toggle='modal' data-target ='#transactionForm' data-id="<?= $transactionForm->acc ?>"class='btn btn-xs btn-warning' name ='acc'>Create Transaction</button>
                     </form></td></tr>";
                   }
                   else if ($msg == 1)
@@ -100,7 +100,7 @@
           </div>
 
           <!-- Modal -->
-          <div class="modal fade" id="transactionForm" role="dialog">
+          <div class="modal fade" id="transactionForm">
             <div class="modal-dialog">
 
               <!-- Modal content-->
@@ -109,7 +109,7 @@
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
                   <h4 class="modal-title">Enter Transaction</h4>
                 </div>
-                <div class="modal-body">
+                <div class="modal-y">
                   <?php
                     $accnum = $_POST['acc'];
                     echo $accnum;
