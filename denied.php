@@ -21,7 +21,7 @@ session_start();
 <link rel="icon" href="../../favicon.ico">
 
 
-<title>Lockation | Transaction Denied</title>
+<title>Flock | Transaction Denied</title>
 
 
 <!-- Bootstrap core CSS -->
@@ -56,7 +56,7 @@ session_start();
 <body>
   <div data-role="page">
   <div data-role="header" data-position="fixed">
-    <center><img src="header.png" style="width:125px;height:140px"></center>
+    <center><img src="header.png" style="width:140px;height:140px"></center>
   </div>
 <!--Title><![endif]-->
 <div class="container">

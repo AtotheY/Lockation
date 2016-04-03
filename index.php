@@ -8,7 +8,7 @@ session_start();
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <title>Lockation | Dashboard</title>
+    <title>Flock | Dashboard</title>
 
     <!-- Bootstrap core CSS -->
     <link href="\css\bootstrap.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@ session_start();
 
   <body>
     <div data-role="header" data-position="fixed" id="fixedheader">
-      <center><img src="header.png" style="width:125px;height:140px"></center>
+      <center><img src="header.png" style="width:140px;height:140px"></center>
     </div>
 
     <h2 class="sub-header"><center>Dashboard</center></h2>

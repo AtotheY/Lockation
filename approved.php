@@ -9,7 +9,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="icon" href="../../favicon.ico">
-<title>Lockation | Transaction Approved</title>
+<title>Flock | Transaction Approved</title>
 
 <!--// Bootstrap core CSS -->
 <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
@@ -38,7 +38,7 @@
 <body>
 
   <div data-role="header" data-position="fixed" id="fixedheader">
-    <center><img src="header.png" style="width:125px;height:140px"></center>
+    <center><img src="header.png" style="width:140px;height:140px"></center>
   </div>
 <!--Title><![endif]-->
 <div class="container">

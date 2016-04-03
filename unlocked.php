@@ -18,7 +18,7 @@
 <link rel="icon" href="../../favicon.ico">
 
 
-<title>Lockation | Account Unlocked</title>
+<title>Flock | Account Unlocked</title>
 
 
 <!-- Bootstrap core CSS -->
@@ -53,7 +53,7 @@
 <body>
   <div data-role="page">
   <div data-role="header" data-position="fixed">
-    <center><img src="header.png" style="width:125px;height:140px"></center>
+    <center><img src="header.png" style="width:140px;height:140px"></center>
   </div>
 <!--Title><![endif]-->
 

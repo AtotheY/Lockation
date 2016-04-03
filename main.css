@@ -55,9 +55,6 @@ div-container{
     border-color: #7A0CE8;
     color: #ffffff;
     position:relative;
-    alig
-    left:12.5%;
-    right:12.5%;
 }
 
 .btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .open > .dropdown-toggle.btn-warning {
